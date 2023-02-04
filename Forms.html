@@ -12,6 +12,31 @@
             }
         </style>
 
+Feitos nos botões
+<style>
+
+    button {
+        background: none;
+        border: 0;
+        position: relative;
+    }
+    
+    button:after {
+        content: '';
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #ffab9d;
+
+        position: absolute;
+        top: -50%;
+        left: -10px;
+
+        opacity: 0.3;
+        z-index: -1;
+    }
+</style>
+
     </head>
 
     <body>
@@ -40,7 +65,7 @@
             <input type="checkbox" value="insta"/> Instagram
             <input type="checkbox" value="tikto"/> Tiktok
             <input type="checkbox" value="snapc"/> Snapchat
-            </br>
+            </br></br>
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
         </form>
