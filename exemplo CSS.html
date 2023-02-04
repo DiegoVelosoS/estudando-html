@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chaset="utf8" />
+		<title>Meu primeiro site</title>
+
+		<style>
+			Body {
+				margin: 0px;
+				text-align: center;
+				font-family: arial;
+				background: #777;
+			}
+
+			p { color: #FFF; }
+			p#maior { font-size: 30px; }
+
+			p#excss {
+					background: rgb(236, 19, 73);
+					width: 100px;
+					border: 1px solid rgb(44, 43, 51);
+					margin: 20px auto;
+					padding: 5px;
+					}
+			
+
+			h1 { color: #CCC }
+			a { color: #FF0; text-decoration: none; }
+		
+			table {
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: 0px auto;
+				width: 200px;
+				padding: 5px;
+				caption-side: bottom;
+			}
+			th, td { border: 1px solid black;}
+			th { background: #ddd; }
+			caption { font-size: 80%; padding: 2px; }
+			
+			p.destaque { color: red; }
+			a { color: #070; font-weight: bold; }
+			a:hover { color:#0f0; }
+			a:active { color: white; background: #0f0; }
+
+
+		</style>
+
+
+	</head>
+	<body>
+		<h1>Bem vindo ao meu site</h1>
+		<p>Veja esta imagem: <br /><img src="sun.gif" alt="sol" /></p>
+		<p id="maior">Visite o site da <a href="https://www.google.com" target="_blank">Google</a>.</p>
+		<p>Veja que belo exemplo de HTML.</p>
+		<p id="excss">CSS in Box</p>
+		
+		<table>
+			<tr>
+				<th>TABELA</th><th>Título Th</th>
+			</tr>
+			<tr>
+				<TD>L2 C1</TD><td>L2 C1 td</td>
+			</tr>
+			<Tr>
+				<TD>L3 C1</TD><td>L3 C2 td</td>
+			</Tr>
+			<caption>Exemplo de tabela no html.</caption>
+		</table>
+
+		<p class="destaque">CSS e as
+			<a href="https://youtu.be/IAzOdaOH3QM" target="_blank">
+				PSSEUDO-CLASSES
+			</a>.
+		</p>
+
+		
+	</body>
+</html>
