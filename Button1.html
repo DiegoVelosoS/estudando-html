@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chaset="utf8" />
+		<title>1º botão com efeito</title>
+
+        <style>
+
+            body {
+                text-align: center;
+            }
+
+            button {
+                background: none;
+                border: 0;
+                position: relative;
+            }
+
+            button:after {
+                content: '';
+        
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: #ffab9d;
+        
+                position: absolute;
+                top: -50%;
+                left: -10px;
+        
+                opacity: 0.3;
+                z-index: -1;
+            }
+                   
+
+        </style>
+
+
+    </head>
+    <body>
+        <button>Abrir →</button>
+    </body>
+
+
