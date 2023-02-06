@@ -1,0 +1,14 @@
+:root {
+    --cor-primaria-success : rgb(75, 200, 138);
+    --cor-secundaria-success : rgb(255, 0, 0);
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+}
+
+.btn-success {
+    background-color: var(--cor-primaria-success);
+    outline-color: var(--cor-secundaria-success);
+}
