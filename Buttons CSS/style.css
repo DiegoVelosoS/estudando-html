@@ -1,14 +1,17 @@
 :root {
     --cor-primaria-success : rgb(75, 200, 138);
-    --cor-secundaria-success : rgb(255, 0, 0);
+    --cor-secundaria-success : rgb(22, 58, 40);
 }
 
 .btn {
     border: none;
     padding: 10px;
+    text-decoration: none;
 }
 
 .btn-success {
     background-color: var(--cor-primaria-success);
-    outline-color: var(--cor-secundaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success);
+    text-transform: uppercase;
 }
