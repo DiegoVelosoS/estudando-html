@@ -15,3 +15,21 @@
     color: var(--cor-secundaria-success);
     text-transform: uppercase;
 }
+
+.btn-animation span:after {
+    content: '→';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-animation:hover span {
+    padding-right: 25px;
+}
+
+.btn-animation:hover span:after {
+    opacity: 1;
+    right: 0;
+}
