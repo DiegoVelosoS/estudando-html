@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chaset="utf8" />
+		<title>Renegocia Fácil</title>
+
+        <style>
+            body {
+                line-height: 2px;
+                background: #e7e7e7;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <h1>
+            Renegocia Fácil
+        </h1>
+        <form>
+         DADOS DO DEVEDOR
+            </br>
+
+            Nome completo*: <input type="text" id="Devedor" placeholder="NOME SOBRENOME" autofocus /></br>
+            CPF*: <input type="text" id="CPF" maxlength="11" placeholder="123.456.789-01" autofocus/></br>
+            Telefone para contato*: <input type="text" id="Telefone" maxlength="12" placeholder="095 99100 - 0000" autofocus /></br>
+          
+            <form action="#" onsubmit="return false">
+                CEP: <input type="text" id="cep" maxlength="9" placeholder="13483-000" autofocus><br><br>
+                UF: <input type="text" id="uf"><br>
+                Cidade: <input type="text" id="cidade"><br>
+                Bairro: <input type="text" id="bairro"><br>
+            </form>
+
+
+            <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+            <script>
+                
+                $("#cep").blur(function(){
+                    var cep = this.value.replace(/[^0-9]/, "");
+                    if(cep.length != 8){
+                        return false;
+                    }
+                    var url = "https://viacep.com.br/ws/"+cep+"/json/";
+                    
+                    $.getJSON(url, function(dadosRetorno){
+                        try{
+                            // Preenche os campos de acordo com o retorno da pesquisa
+                            $("#endereco").val(dadosRetorno.logradouro);
+                            $("#bairro").val(dadosRetorno.bairro);
+                            $("#cidade").val(dadosRetorno.localidade);
+                            $("#uf").val(dadosRetorno.uf);
+                        }catch(ex){}
+                    });
+                });
+            </script>
+
+
+        DADOS FINANCEIROS</br>
+            Tipo de acordo financeiro:
+            <select>
+                <option>Escolha o tipo do negociação</option>
+                <option value="Acordo">Acordo financeiro</option>
+                <option value="Renegocia acordo">Renegociação de Acordo</option>
+            </select>
+            </br>
+
+            Valor Total do Débito: <input type="number" name="Total do Débito" />
+            </br>
+            Data da base do calculo do Débito: <input type="date" name="Data" />
+            </br>
+            Valor da Entrada: <input type="number" name="Entrada" />
+            </br>
+            Quantidade de parcelas: <input type="number" name="parcelas" />
+            </br>
+            Forma de pagamento:
+            <input type="radio" id="fpag" value="espécie"/> Espécie
+            <input type="radio" id="fpag" value="Transferência"/> Transferência
+            <input type="radio" id="fpag" value="Cartão de Débito"/> Cartão de Débito
+            <input type="radio" id="fpag" value="Cartão de Crédito"/> Cartão de Crédito
+            </br>
+            Vias para impressão</br>
+            <input type="checkbox" value="VClie"/> Via Cliente
+            <input type="checkbox" value="VEmpr"/> Via Empresa
+            <input type="checkbox" value="VCart"/> Via Cartório
+            </br></br>
+            <button type="submit">Calcular</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </body>
+</html>
