@@ -1,4 +1,4 @@
-<!DOCTYPE javascript>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta chaset="utf8" />
@@ -19,17 +19,43 @@
         </br>
         <div>
             1º número: <input id="num1"><br>
-            2º número: <input><br>
+            2º número: <input id="num2">
         </div>
-        <h3>Resultado</h3>
-        <p>(Resultado)</p>
+
+        <h3>Escolha a operação:</h3>
+        <div>
+            <button onclick="somar()">SOMAR</button>
+            <button onclick="subtratir()">SUBTRAIR</button>
+            
+        </div>
+
+        <h4>Resultado</h4>
+        <p id="resultado"></p>
 
         <script>
             function somar() {
-                        var n1 = document.getElementById("nun1").value;
+                var n1 = Number(document.getElementById("num1").value);
+                var n2 = Number(document.getElementById("num2").value);
+                var resultado =  n1 + n2;
+                        
+                console.log(n1);
+                console.log(n2);
+                console.log(resultado);
 
+                document.getElementById("resultado").textContent = resultado;        
             }
 
+            function subtratir() {
+                var n1 = Number(document.getElementById("num1").value);
+                var n2 = Number(document.getElementById("num2").value);
+                var resultado =  n1 - n2;
+                        
+                console.log(n1);
+                console.log(n2);
+                console.log(resultado);
+
+                document.getElementById("resultado").textContent = resultado;        
+            }
         </script>
 
 
