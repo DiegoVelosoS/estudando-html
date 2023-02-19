@@ -21,7 +21,7 @@
             1º número: <input id="num1"><br>
             2º número: <input id="num2">
         </div>
-
+        <p>*Obs.: neste campo use "." no lugar de ","</p>
         <h3>Escolha a operação:</h3>
         <div>
             <button onclick="somar()">SOMAR</button>
@@ -34,8 +34,8 @@
 
         <script>
             function somar() {
-                var n1 = Number(document.getElementById("num1").value);
-                var n2 = Number(document.getElementById("num2").value);
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
                 var resultado =  n1 + n2;
                         
                 console.log(n1);
@@ -46,8 +46,8 @@
             }
 
             function subtratir() {
-                var n1 = Number(document.getElementById("num1").value);
-                var n2 = Number(document.getElementById("num2").value);
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
                 var resultado =  n1 - n2;
                         
                 console.log(n1);
